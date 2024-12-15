@@ -1,0 +1,222 @@
+<!DOCTYPE html><!--Created by Vipul Gupta -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Test</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #161B22;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #1F2A35;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+
+    .timer {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #B0BEC5;
+    }
+
+    .progress-bar {
+      position: relative;
+      width: 100%;
+      height: 10px;
+      background: #2C3E50;
+      margin-top: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: #007bff;
+      width: 0;
+      transition: width 1s linear;
+    }
+
+    .text-display {
+      font-size: 18px;
+      background: #2C3E50;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      text-align: left;
+      height: 150px;
+      overflow-y: auto;
+      border: 1px solid #4A6572;
+      color: #E0E0E0;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border: 1px solid #4A6572;
+      border-radius: 5px;
+      background: #2C3E50;
+      color: #E0E0E0;
+      resize: none;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+
+    .metrics {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #B0BEC5;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transition: background-color 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="timer" id="timer">60s</div>
+    <h1>Typing Test</h1>
+    <div class="progress-bar">
+      <div class="progress-bar-fill" id="progress-bar-fill"></div>
+    </div>
+    <div class="text-display" id="text-display"></div>
+    <textarea id="input" placeholder="Start typing here..." disabled></textarea>
+    <button id="start-button">Start Test</button>
+    <div class="metrics" id="metrics"></div>
+    <div class="progress" id="progress"></div>
+  </div>
+
+  <script>
+    const textDisplay = document.getElementById('text-display');
+    const inputField = document.getElementById('input');
+    const startButton = document.getElementById('start-button');
+    const timerDiv = document.getElementById('timer');
+    const progressBarFill = document.getElementById('progress-bar-fill');
+    const metricsDiv = document.getElementById('metrics');
+    const progressDiv = document.getElementById('progress');
+
+    const words = [
+      "quick", "brown", "fox", "lazy", "dog", "jumps", "over", "the", "cat",
+      "walks", "into", "a", "bar", "and", "says", "hello", "world", "this",
+      "is", "a", "typing", "test", "great", "job", "keep", "going", "learn",
+      "practice", "makes", "perfect", "random", "words", "help", "you", "improve"
+    ];
+
+    let currentWords = [];
+    let wordCount = 0;
+    let timer = 60;
+    let interval = null;
+    let previousTests = [];
+    
+    function startTest() {
+      // Reset values
+      currentWords = [];
+      wordCount = 0;
+      timer = 60;
+      textDisplay.innerHTML = '';
+      metricsDiv.textContent = '';
+      progressDiv.textContent = '';
+      inputField.value = '';
+      progressBarFill.style.width = '0%';
+      inputField.disabled = false;
+      inputField.focus();
+
+      // Generate words dynamically
+      for (let i = 0; i < 20; i++) {
+        currentWords.push(words[Math.floor(Math.random() * words.length)]);
+      }
+      updateTextDisplay();
+
+      // Start timer and progress bar
+      startButton.disabled = true;
+      interval = setInterval(updateTimer, 1000);
+    }
+
+    function updateTextDisplay() {
+      textDisplay.innerHTML = currentWords.map(word => `<span>${word}</span>`).join(' ');
+    }
+
+    function updateTimer() {
+      timer--;
+      timerDiv.textContent = `${timer}s`;
+      progressBarFill.style.width = `${((60 - timer) / 60) * 100}%`;
+
+      if (timer <= 0) {
+        clearInterval(interval);
+        endTest();
+      }
+    }
+
+    function checkInput() {
+      const input = inputField.value.trim();
+      const currentWord = currentWords[0];
+
+      if (input === currentWord) {
+        wordCount++;
+        currentWords.shift();
+        currentWords.push(words[Math.floor(Math.random() * words.length)]);
+        updateTextDisplay();
+        inputField.value = '';
+      }
+    }
+
+    function endTest() {
+      inputField.disabled = true;
+      startButton.disabled = false;
+      startButton.textContent = 'Restart Test';
+
+      // Record results
+      previousTests.push(wordCount);
+      const progressMessage = previousTests.length > 1
+        ? `Your last test: ${wordCount} words. Previous: ${previousTests[previousTests.length - 2]} words.`
+        : `Your last test: ${wordCount} words.`;
+
+      metricsDiv.innerHTML = `
+        <p>Words Typed: <strong>${wordCount}</strong></p>
+        <p>${progressMessage}</p>
+      `;
+    }
+
+    // Event Listeners
+    startButton.addEventListener('click', startTest);
+    inputField.addEventListener('input', checkInput);
+  </script>
+</body>
+</html>
