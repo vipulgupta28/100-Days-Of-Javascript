@@ -1,0 +1,43 @@
+ <!DOCTYPE html> <!--Created by Vipul Gupta -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Test Landing Page</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="navbar">
+    <h1>MyType.com</h1>
+    <button>Login/Signup</button>
+  </div>
+
+  <div class="content">
+    <!-- Left Column -->
+    <div class="left-column">
+      <h1>Typing Tests</h1>
+      <div class="timed-tests">
+        <h3>Timed Tests</h3>
+        <div class="test-option" id="test-1min">1:00 Test <button onclick="start1()">Start Test</button></div>
+        <div class="test-option" id="test-3min">3:00 Test <button onclick="start3()">Start Test</button></div>
+        <div class="test-option" id="test-5min">5:00 Test <button onclick="start5()">Start Test</button></div>
+
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column">
+      <h2>Progress</h2>
+      <div class="progress-graph">
+        <!-- Progress graph placeholder -->
+        <p>Graph of progress will appear here.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="image">
+    <img src="./keyboard-colors-new3.png">
+</div>
+</body>
+<script src="./script.js"></script>
+</html>
