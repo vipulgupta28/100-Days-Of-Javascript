@@ -1,2 +1,4 @@
-PROJECTS
-1.) Typing Test
+#Projects
+Here we have list of projects:
+
+Pixel Art Generator
