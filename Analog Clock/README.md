@@ -1,4 +1,4 @@
-# DAY 7
+# DAY 6
 ## Analog Clock Project
 This project is a modern analog clock built with HTML, CSS, and JavaScript. It displays the current time using clock hands for hours, minutes, and seconds, with smooth transitions and accurate alignment.
 
