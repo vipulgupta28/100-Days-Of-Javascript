@@ -1,0 +1,23 @@
+const countries = {
+    "en-GB": "English",
+    "es-ES": "Spanish",
+    "fr-FR": "French",
+    "de-DE": "German",
+    "it-IT": "Italian",
+    "pt-PT": "Portuguese",
+    "ru-RU": "Russian",
+    "ar-AR": "Arabic",
+    "zh-ZH": "Chinese",
+    "ja-JP": "Japanese",
+    "hi-IN": "Hindi",
+    "ko-KR": "Korean",
+    "tr-TR": "Turkish",
+    "pl-PL": "Polish",
+    "nl-NL": "Dutch",
+    "sv-SE": "Swedish",
+    "no-NO": "Norwegian",
+    "da-DK": "Danish",
+    "fi-FI": "Finnish",
+    "cs-CZ": "Czech",
+    "el-GR": "Greek"
+};
