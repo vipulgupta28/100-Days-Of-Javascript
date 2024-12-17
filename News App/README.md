@@ -1,4 +1,5 @@
-# News-App
+# DAY 5
+## News-App
 A simple web application that fetches and displays the latest news articles based on a search query using the NewsAPI.
 
 Features
