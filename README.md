@@ -9,3 +9,4 @@
 7. Online Dictionary
 8. Interactive Periodic Table
 9. Bouncing Balls Animation
+10. Movie Recommendation App
