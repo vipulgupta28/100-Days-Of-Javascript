@@ -6,3 +6,4 @@
 4. Bird Hunting
 5. News App
 6. Analog Clock
+7. Online Dictionary
