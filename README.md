@@ -10,3 +10,6 @@
 8. Interactive Periodic Table
 9. Bouncing Balls Animation
 10. Movie Recommendation App
+11. Calculator
+12. Stake Mines
+
