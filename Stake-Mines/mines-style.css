@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.settings {
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.settings label {
+    font-size: 18px;
+}
+
+.settings input {
+    padding: 10px;
+    background-color: #2d2d2d;
+    border: 1px solid #3b3b3b;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    width: 100px;
+}
+
+.settings button {
+    padding: 10px 20px;
+    background-color: #414774;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.settings button:hover {
+    background-color: #505f8a;
+}
+
+.mines {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #2d2d2d;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+button {
+    height: 100px;
+    width: 100px;
+    background-color: #3b3b3b;
+    border: none;
+    font-size: 24px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #505050;
+   
+}
+
+button:active {
+    background-color: #606060;
+}
+
+button.revealed {
+    background-color: #414774;
+    color: white;
+    cursor: default;
+    transform: none;
+}
+
+button.mine {
+    background-color: #ff4d4d;
+    color: white;
+    cursor: default;
+    transform: none;
+}
+
+button.flagged {
+    background-color: #f39c12;
+    color: white;
+    cursor: default;
+    transform: none;
+}
+
+#mineCount {
+    padding: 10px;
+    background-color: #2d2d2d;
+    border: 1px solid #3b3b3b;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    width: 60px;
+}
+
+@media (max-width: 600px) {
+    .settings label,
+    .settings button,
+    .settings input {
+        font-size: 5vw;
+    }
+
+    #mineCount {
+        width: 40vw;
+    }
+
+    .mines {
+        gap: 3px;
+    }
+
+    button {
+        height: 20vw;
+        width: 20vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .settings {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .settings button {
+        width: 100%;
+    }
+}
