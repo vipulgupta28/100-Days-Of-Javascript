@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="index1.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>News App</h1>
+            <input type="text" id="search-bar" placeholder="Search for news..." />
+            <button onclick="searchNews()">Search</button>
+        </header>
+        
+        <nav>
+            <button onclick="fetchNews('general')">General</button>
+            <button onclick="fetchNews('business')">Business</button>
+            <button onclick="fetchNews('technology')">Technology</button>
+            <button onclick="fetchNews('sports')">Sports</button>
+            <button onclick="fetchNews('entertainment')">Entertainment</button>
+        </nav>
+
+        <div id="news-container" class="news-container">
+        
+        </div>
+    </div>
+
+    <script src="index1.js"></script>
+</body>
+</html>
