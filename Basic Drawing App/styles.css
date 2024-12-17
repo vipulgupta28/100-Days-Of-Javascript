@@ -1,0 +1,46 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .toolbar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  canvas {
+    border: 1px solid #ccc;
+    background-color: white;
+    
+    
+  }
+
+  #noteInput {
+    position: absolute;
+    display: none;
+    padding: 15px;
+    font-size: 16px;
+    z-index: 10;
+    border:none;
+  }
+  
+  .note {
+    position: absolute;
+    background-color: rgba(255, 255, 0, 0.5);
+    padding: 25px;
+    border: none;
+    font-size: 16px;
+    cursor: all-scroll;
+}
