@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whiteboard with Notes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="toolbar">
+    <label for="colorPicker">Color: </label>
+    <input type="color" id="colorPicker" value="#000000">
+    
+    <label for="brushSize">Brush Size: </label>
+    <input type="range" id="brushSize" min="1" max="10" value="2">
+    
+    <button onclick="clearCanvas()">Clear Canvas</button>
+    <p>Double Click To add Notes</p>
+  </div>
+  <canvas id="whiteboard"></canvas>
+  <input type="text" id="noteInput" >
+  <script src="app.js"></script>
+</body>
+</html>
