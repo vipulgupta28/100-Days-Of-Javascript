@@ -1,0 +1,101 @@
+
+:root {
+    --background-color: #0f0f0f;
+    --container-bg: #1a1a1a;
+    --input-bg: #2b2b2b;
+    --text-color: #ffffff;
+    --accent-color: #38d39f;
+    --button-hover: #2aa878;
+    --error-color: #ff4d4f;
+    --shadow-color: rgba(0, 0, 0, 0.6);
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dictionary-container {
+    text-align: center;
+    background: var(--container-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    width: 400px;
+}
+
+h1 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#wordInput {
+    width: 70%;
+    padding: 10px;
+    background: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+#wordInput::placeholder {
+    color: #aaa;
+}
+
+#searchButton {
+    padding: 10px 15px;
+    background: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+#searchButton:hover {
+    background: var(--button-hover);
+}
+
+.result-box {
+    background: var(--input-bg);
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+    text-align: left;
+}
+
+#wordTitle {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+#wordMeaning {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+#wordExample {
+    color: #bbb;
+    font-style: italic;
+}
+
+.error {
+    color: var(--error-color);
+}
