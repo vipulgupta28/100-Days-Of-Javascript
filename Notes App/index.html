@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note-Taking App</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <button onclick="newNote()">New Note</button>
+            <button onclick="newNotebook()">New Notebook</button>
+            <div id="notebookList"></div>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h1 id="greeting">Good Morning</h1>
+                <div id="time"></div>
+                <button id="themeToggle" onclick="toggleTheme()">Light/Dark Theme</button>
+            </div>
+            <div class="note-form" id="noteForm">
+                <input type="text" id="noteTitle" placeholder="Note Title">
+                <textarea id="noteContent" placeholder="Note Content"></textarea>
+                <button onclick="addNote()">Add Note</button>
+            </div>
+            <div class="notes-list" id="notesList"></div>
+        </div>
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html>
