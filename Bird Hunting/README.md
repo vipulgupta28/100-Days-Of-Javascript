@@ -1,5 +1,5 @@
-#DAY 4
-##Bird Hunting Game 🎯
+# DAY 4
+## Bird Hunting Game 🎯
 A fun bird-shooting game built with HTML, CSS, and JavaScript! Aim with your mouse, shoot the birds, and rack up points. Perfect for practicing your shooting skills while enjoying the thrill of the hunt.
 
 Features
