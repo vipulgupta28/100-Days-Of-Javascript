@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Recommendation App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Movie Recommendation App</h1>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for movies..." />
+        <button id="searchButton">Search</button>
+      </div>
+    </header>
+
+    <div class="genre-container">
+      <h2>Popular Genres</h2>
+      <div class="genres">
+        <button class="genre-btn" onclick="getRecommendations('action')">Action</button>
+        <button class="genre-btn" onclick="getRecommendations('comedy')">Comedy</button>
+        <button class="genre-btn" onclick="getRecommendations('drama')">Drama</button>
+        <button class="genre-btn" onclick="getRecommendations('romance')">Romance</button>
+        <button class="genre-btn" onclick="getRecommendations('thriller')">Thriller</button>
+      </div>
+    </div>
+
+    <div id="movie-container" class="movie-container"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
