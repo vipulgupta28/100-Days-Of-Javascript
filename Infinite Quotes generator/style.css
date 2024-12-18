@@ -1,0 +1,64 @@
+
+body {
+    font-family: "Source Code Pro", monospace;
+    background: #0d1117;
+    color: #c9d1d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.quote-container {
+    text-align: center;
+    background: #161b22;
+    padding: 25px 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    border: 1px solid #30363d;
+}
+
+h1 {
+    color: #58a6ff;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.quote-box {
+    margin-bottom: 20px;
+}
+
+#quote {
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #c9d1d9;
+}
+
+#author {
+    font-size: 1rem;
+    color: #8b949e;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background: #238636;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #2ea043;
+}
+
+button:active {
+    background: #238636;
+    transform: scale(0.98);
+}
