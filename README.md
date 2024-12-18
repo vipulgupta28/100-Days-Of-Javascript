@@ -18,5 +18,6 @@
 16. Pong Game
 17. Currency Converter
 18. Infinite Quotes Generator
+19. Notes App
     
 
