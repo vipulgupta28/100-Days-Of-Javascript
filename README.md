@@ -17,5 +17,6 @@
 15. ChatBot
 16. Pong Game
 17. Currency Converter
+18. Infinite Quotes Generator
     
 
