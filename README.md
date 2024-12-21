@@ -30,6 +30,7 @@
 28. 2048
 29. Rotating Cube
 30. Prime Number checker
+31. Sudoku Solver
 
     
     
