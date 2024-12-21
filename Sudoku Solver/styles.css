@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+.container {
+    text-align: center;
+    background: #161b22;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 2px;
+    margin: 20px 0;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #30363d;
+    background-color: #21262d;
+    color: #c9d1d9;
+    outline: none;
+    border-radius: 4px;
+}
+
+.cell:nth-child(3n) {
+    border-right: 2px solid #8b949e;
+}
+
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid #8b949e;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #238636;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2ea043;
+}
+
+button:active {
+    background-color: #19692c;
+}
+
+button:disabled {
+    background-color: #3a3f44;
+    cursor: not-allowed;
+}
+
+#sudoku-grid .cell:focus {
+    border: 2px solid #238636;
+    background-color: #161b22;
+}
+
+.container h1 {
+    color: #c9d1d9;
+    margin-bottom: 10px;
+}
