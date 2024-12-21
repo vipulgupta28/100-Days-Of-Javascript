@@ -32,6 +32,7 @@
 30. Prime Number checker
 31. Sudoku Solver
 32. Gameboy Tetris clone
+33. Detect Device Battery
 
     
     
