@@ -35,6 +35,7 @@
 33. Detect Device Battery
 34. Breakout Game
 35. Api Quiz App
+36. Crypto Price Tracker
 
     
     
