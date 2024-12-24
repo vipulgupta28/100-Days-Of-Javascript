@@ -44,6 +44,7 @@
 42. Voice-Controlled Stopwatch
 43. Interactive Constellation Drawer
 44. 3D Dice Roller
+45. QR Code Generator
 
     
     
