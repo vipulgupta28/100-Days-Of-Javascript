@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encryptor</title>
+    <link rel="stylesheet" href="style.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Text Encryptor</h1>
+        
+        <div>
+            <label for="text">Enter Text:</label>
+            <textarea id="text" rows="4" placeholder="Enter the text to encrypt..."></textarea>
+        </div>
+
+        <div>
+            <label for="password">Enter Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+
+        <div>
+            <button onclick="encryptText()">Encrypt</button>
+            <button onclick="decryptText()">Decrypt</button>
+        </div>
+
+        <div>
+            <h2>Result:</h2>
+            <textarea id="result" rows="4" placeholder="Encrypted text or decrypted text will appear here..." readonly></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
