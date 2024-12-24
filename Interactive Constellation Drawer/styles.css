@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0d1b2a;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.app {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #f0f0f0;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  background: #1b263b;
+  border: 2px solid #415a77;
+  cursor: crosshair;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 14px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #415a77;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1b263b;
+}
