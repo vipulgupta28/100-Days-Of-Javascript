@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
+  color: white;
+}
+
+.app {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.stopwatch {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.instructions {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#status {
+  font-size: 16px;
+  color: #61dafb;
+}
