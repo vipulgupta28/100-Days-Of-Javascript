@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vending Machine</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="vending-machine">
+    <div class="screen" id="screen">Select an item</div>
+    <div class="items">
+      <button class="item" data-name="Chips" data-price="1.5">$1.50<br>Chips</button>
+      <button class="item" data-name="Soda" data-price="1.0">$1.00<br>Soda</button>
+      <button class="item" data-name="Candy" data-price="0.75">$0.75<br>Candy</button>
+      <button class="item" data-name="Cookies" data-price="2.0">$2.00<br>Cookies</button>
+    </div>
+    <div class="input-section">
+      <input type="number" id="amount" placeholder="Insert money" />
+      <button id="pay-button">Pay</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
